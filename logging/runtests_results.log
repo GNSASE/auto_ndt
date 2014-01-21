@@ -1,0 +1,12 @@
+INFO:test_logging:
+Validating syntax for bin/lib/test directories.
+Only errors will be reported, please wait...
+INFO:test_logging:
+
+########################
+
+# Running unit tests
+
+########################
+
+
