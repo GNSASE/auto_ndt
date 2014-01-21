@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!--#!!! Begin javascript for selection tabs-->
+<script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
+<!--#!!! End javascript for selection tabs-->
+      <p>You have successfully submitted a new NDT for PID: {{ query_dict.pid_number }}<br>
+
+      <div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">IP Assignment</a></li>
+    <li><a href="#tabs-2">Inband Cabling</a></li>
+    <li><a href="#tabs-3">Management Cabling</a></li>
+    <li><a href="#tabs-4">OOB Cabling</a></li>
+    <li><a href="#tabs-5">Port Planning</a></li>
+  </ul>
+    <div id="tabs-1">
+    <p>
+      <form name="edit_ndt" action="ndt_edit" onsubmit="return validateEditNDTForm();" method="get">
+        <label for="pid_number">PID Number: </label><input type="text" name="pid_number"><font color="red">*Required</font><br><br>
+        <input type="submit" value="Submit">
+      </form>
+      </p>
+  </div>
+
+        Here is what you have submitted...<br><br>
+        {% for k, v in query_dict_iter %}
+        Key: {{ k }} Value: {{ v }}<br>
+        {% endfor %}
+    </p>
+{% endblock %}

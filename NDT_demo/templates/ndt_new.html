@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!--#!!! Begin javascript datepicker-->
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+    $( "#format" ).change(function() {
+      $( "#datepicker" ).datepicker( "option", "dateFormat", $( 'yy-mm-dd' ) );
+    });
+  });
+  </script>
+  <!--#!!! End javascript for datepicker-->
+<!--#!!! Begin javascript form validation-->
+<script>
+function validateNewNDTForm()
+{
+var x=document.forms["new_ndt"]["pid_number"].value;
+if (x==null || x=="")
+  {
+  alert("PID number required, please enter a valid PID number.");
+  return false;
+  }
+var x=document.forms["new_ndt"]["datepicker"].value;
+if (x==null || x=="")
+  {
+  alert("Date required, please enter a valid date yy/mm/dd.");
+  return false;
+  }
+var x=document.forms["new_ndt"]["user_alias"].value;
+if (x==null || x=="")
+  {
+  alert("User alias required, please enter a valid user alias.");
+  return false;
+  }
+  {% for variable in xml_variables %}
+  var x=document.forms["new_ndt"]["{{variable.tag}}:template_variable"].value;
+    if (x==null || x=="")
+    {
+      alert('Required field {{variable.tag}} is not filled out.');
+      return false;
+    }
+  {% endfor %}
+}
+</script>
+<!--#!!! End javascript form validation-->
+<!--#!!! Begin javascript for tooltops-->
+<script>
+  $(function() {
+    $( document ).tooltip();
+  });
+  </script>
+  <style>
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+  </style>
+<!--#!!! End javascript tooltop-->
+      <p>
+      <form name="new_ndt" action="ndt_new_submit" onsubmit="return validateNewNDTForm();" method="POST">
+        <h2>Project details:</h2><br><br>
+        <font color="red">*Required</font><br><br>
+        <label for="pid_number">PID number: </label><input type="text" name="pid_number" value='{{ pid_number }}' readonly="readonly" title="Project ID number for this NDT."><font color="red">*</font><br><br>
+        <label for="datepicker">Date: </label><input type="text" id="datepicker" title="Choose the begin date for this NDT" /><font color="red">*</font><br><br>
+        <label for="user_alias">User alias: </label><input type="text" name="user_alias" title="Your Microsoft alias _WITHOUT_ domain information"><font color="red">*</font><br><br>
+        <label for="scale_unit">Scale unit: </label><input type="text" name="scale_unit"  value='{{scale_unit}}' readonly="readonly" title="The selected network scale unit when the PID was created."><font color="red">*</font><br><br>
+        <label for="base_standard_url">Design Standard: </label><a href='{{base_standard_url}}'>Click here to view</a><br><br>
+        <h2>NDT Template Variables</h2><br><br>
+<table class="tableizer-table">
+<tr class="tableizer-firstrow"><th>Variable Name</th><th>Value</th><th>Description</th></tr>
+        {% for variable in xml_variables %}
+          {% if variable.attrib.form_phase == "1" %}
+            {% if variable.attrib.form_type == 'text' %}
+              <tr><td>{{variable.attrib.friendly_name}}</td><td><input type='{{variable.attrib.form_type}}' name='{{variable.tag}}:template_variable' value='{{variable.attrib.form_default_value}}' {% if variable.attrib.form_element_locked == "yes" %} readonly="readonly" {% endif %}></td><td>{{variable.attrib.desc}}</td>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+</table>
+        <input type="submit" value="Submit">
+      </form>
+      </p>
+      </p>
+{% endblock %}

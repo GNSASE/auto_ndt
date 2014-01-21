@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!--#!!! Begin javascript for selection tabs-->
+<script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
+<!--#!!! End javascript for selection tabs-->
+<!--#!!! Begin javascript datepicker-->
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+    $( "#format" ).change(function() {
+      $( "#datepicker" ).datepicker( "option", "dateFormat", $( 'yy-mm-dd' ) );
+    });
+  });
+  </script>
+  <!--#!!! End javascript for datepicker-->
+<!--#!!! Begin javascript form validation-->
+<script>
+function validateNewNDTForm()
+{
+var x=document.forms["new_ndt"]["pid_number"].value;
+if (x==null || x=="")
+  {
+  alert("PID number required, please enter a valid PID number.");
+  return false;
+  }
+var x=document.forms["new_ndt"]["scale_unit"].value;
+if (x==null || x=="")
+  {
+  alert("Please select a valid Sisyphus scale unit.");
+  return false;
+  }
+}
+function validateEditNDTForm()
+{
+var x=document.forms["edit_ndt"]["pid_number"].value;
+if (x==null || x=="")
+  {
+  alert("PID number required, please enter a valid PID number.");
+  return false;
+  }
+}
+</script>
+<script>
+  $(function() {
+    $( document ).tooltip();
+  });
+  </script>
+  <style>
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+  </style>
+  <!--#!!! End javascript form validation-->
+      <div id="tabs">
+  <ul>
+    <li><a href="#tabs-1" title="Create a new network deployment template.">Create new NDT</a></li>
+    <li><a href="#tabs-2" title="Edit/view existing network deployment template.">Edit/View existing NDT</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>
+      <form name="new_ndt" action="ndt_new" onsubmit="return validateNewNDTForm();" method="POST">
+        <b><font size="1" color="red"> * input required</font></b><br><br>
+        <label for="pid_number">PID Number: </label><input type="text" name="pid_number"><b><font color="red" title="Project ID number for the new network deployment."> * ?</font></b><br><br>
+        <label for="scale_unit">Scale Unit:</label><select name="scale_unit" id="scale_unit"/>
+          <option name="" value="" selected disabled="disabled">Please select a scale unit</option>
+          {% for entry in scale_units %}
+          <option name={{entry}} value={{entry}}>{{entry}}</option>
+          {% endfor %}
+        </select><b><font color="red" title="This is network toplogy type as required by Sisyphus."> * ?</font></b><br><br>
+        <input type="submit" value="Submit">
+      </form>
+      </p>
+  </div>
+  <div id="tabs-2">
+    <p>
+      <form name="edit_ndt" action="ndt_edit" onsubmit="return validateEditNDTForm();" method="post">
+        <label for="pid_number">PID Number: </label><input type="text" name="pid_number">&nbsp;<input type="submit" value="Submit">
+      </form>
+  </div>
+</div></p>
+
+{% endblock %}

@@ -1,0 +1,1332 @@
+11/05/2013 09:52:13 AM : ERROR : Internal Server Error: /ndt_new
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\garyw\Desktop\NDT_demo\NDT_demo\views.py", line 22, in ndt_new
+    return render(request, 'ndt_new.html', globals)
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 175, in render_to_string
+    context_instance.update(dictionary)
+  File "c:\Python27\lib\site-packages\django\template\context.py", line 106, in update
+    raise TypeError('other_dict must be a mapping (dictionary-like) object.')
+TypeError: other_dict must be a mapping (dictionary-like) object.
+11/05/2013 10:05:45 AM : ERROR : Internal Server Error: /ndt_edit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\garyw\Desktop\NDT_demo\NDT_demo\views.py", line 29, in ndt_edit
+    return render_to_response(request, 'ndt_edit.html', pid_number)
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 170, in render_to_string
+    t = get_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 146, in get_template
+    template, origin = find_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 139, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: <WSGIRequest
+path:/ndt_edit,
+GET:<QueryDict: {u'pid_number': [u'123456']}>,
+POST:<QueryDict: {}>,
+COOKIES:{'arp_scroll_position': '0'},
+META:{'ALLUSERSPROFILE': 'C:\\ProgramData',
+ 'APPDATA': 'C:\\Users\\garyw\\AppData\\Roaming',
+ 'COMMONPROGRAMFILES': 'C:\\Program Files (x86)\\Common Files',
+ 'COMMONPROGRAMFILES(X86)': 'C:\\Program Files (x86)\\Common Files',
+ 'COMMONPROGRAMW6432': 'C:\\Program Files\\Common Files',
+ 'COMPUTERNAME': 'MININT-BC46NSD',
+ 'COMSPEC': 'C:\\windows\\system32\\cmd.exe',
+ 'CONTENT_LENGTH': '',
+ 'CONTENT_TYPE': 'text/plain',
+ u'CSRF_COOKIE': u'bqi3E3Btqlq7TRuUsJJ5eNNKi2jIF1mE',
+ 'DJANGO_SETTINGS_MODULE': 'NDT_demo.settings',
+ 'FP_NO_HOST_CHECK': 'NO',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HOMEDRIVE': 'C:',
+ 'HOMEPATH': '\\Users\\garyw',
+ 'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+ 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.8',
+ 'HTTP_CACHE_CONTROL': 'max-age=0',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_COOKIE': 'arp_scroll_position=0',
+ 'HTTP_HOST': '127.0.0.1:8000',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.101 Safari/537.36',
+ 'LOCALAPPDATA': 'C:\\Users\\garyw\\AppData\\Local',
+ 'LOGONSERVER': '\\\\SVC-NA-DC-03',
+ 'NUMBER_OF_PROCESSORS': '8',
+ 'OS': 'Windows_NT',
+ 'PATH': 'C:\\Program Files\\Common Files\\Microsoft Shared\\Microsoft Online Services;C:\\Program Files (x86)\\Common Files\\Microsoft Shared\\Microsoft Online Services;C:\\windows\\system32;C:\\windows;C:\\windows\\System32\\Wbem;C:\\windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Windows Kits\\8.1\\Windows Performance Toolkit\\;C:\\Program Files\\Microsoft SQL Server\\110\\Tools\\Binn\\;C:\\Program Files (x86)\\Private Shell;',
+ 'PATHEXT': '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+ 'PATH_INFO': u'/ndt_edit',
+ 'PROCESSOR_ARCHITECTURE': 'x86',
+ 'PROCESSOR_ARCHITEW6432': 'AMD64',
+ 'PROCESSOR_IDENTIFIER': 'Intel64 Family 6 Model 30 Stepping 5, GenuineIntel',
+ 'PROCESSOR_LEVEL': '6',
+ 'PROCESSOR_REVISION': '1e05',
+ 'PROGRAMDATA': 'C:\\ProgramData',
+ 'PROGRAMFILES': 'C:\\Program Files (x86)',
+ 'PROGRAMFILES(X86)': 'C:\\Program Files (x86)',
+ 'PROGRAMW6432': 'C:\\Program Files',
+ 'PROMPT': '$P$G',
+ 'PSMODULEPATH': 'C:\\windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\;c:\\Program Files\\Microsoft Security Client\\MpProvider\\',
+ 'PUBLIC': 'C:\\Users\\Public',
+ 'QUERY_STRING': 'pid_number=123456',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '',
+ 'REQUEST_METHOD': 'GET',
+ 'RUN_MAIN': 'true',
+ 'SCRIPT_NAME': u'',
+ 'SERVER_NAME': 'MININT-BC46NSD.northamerica.corp.microsoft.com',
+ 'SERVER_PORT': '8000',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.5',
+ 'SESSIONNAME': 'Console',
+ 'SYSTEMDRIVE': 'C:',
+ 'SYSTEMROOT': 'C:\\windows',
+ 'SYSTEMTYPE': 'da-laptop',
+ 'TEMP': 'C:\\Users\\garyw\\AppData\\Local\\Temp',
+ 'TMP': 'C:\\Users\\garyw\\AppData\\Local\\Temp',
+ 'UATDATA': 'C:\\Windows\\CCM\\UATData\\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77',
+ 'USERDNSDOMAIN': 'NORTHAMERICA.CORP.MICROSOFT.COM',
+ 'USERDOMAIN': 'NORTHAMERICA',
+ 'USERDOMAIN_ROAMINGPROFILE': 'NORTHAMERICA',
+ 'USERNAME': 'garyw',
+ 'USERPROFILE': 'C:\\Users\\garyw',
+ 'VS120COMNTOOLS': 'C:\\Program Files (x86)\\Microsoft Visual Studio 12.0\\Common7\\Tools\\',
+ 'WINDIR': 'C:\\windows',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x01BE60D0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x02A55F80>,
+ 'wsgi.input': <socket._fileobject object at 0x02DB2130>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}>
+11/05/2013 10:14:08 AM : ERROR : Internal Server Error: /ndt_edit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\garyw\Desktop\NDT_demo\NDT_demo\views.py", line 30, in ndt_edit
+    return render(request, 'ndt_edit.html', request.GET)
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 170, in render_to_string
+    t = get_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 146, in get_template
+    template, origin = find_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 135, in find_template
+    source, display_name = loader(name, dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 157, in get_template_from_string
+    return Template(source, origin, name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 253, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 353, in compile_filter
+    return FilterExpression(token, self)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 570, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '['pid_number']' from 'request.GET['pid_number']'
+11/05/2013 10:19:41 AM : ERROR : Internal Server Error: /ndt_edit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\garyw\Desktop\NDT_demo\NDT_demo\views.py", line 28, in ndt_edit
+    return render(request, 'ndt_edit.html', query_val)
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 170, in render_to_string
+    t = get_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 146, in get_template
+    template, origin = find_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 135, in find_template
+    source, display_name = loader(name, dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 157, in get_template_from_string
+    return Template(source, origin, name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 253, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 353, in compile_filter
+    return FilterExpression(token, self)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 570, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '['pid_number']' from 'query_val['pid_number']'
+11/05/2013 10:34:31 AM : ERROR : Internal Server Error: /ndt_edit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\garyw\Desktop\NDT_demo\NDT_demo\views.py", line 26, in ndt_edit
+    return render(request, 'ndt_edit.html', request.GET)
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 170, in render_to_string
+    t = get_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 146, in get_template
+    template, origin = find_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 135, in find_template
+    source, display_name = loader(name, dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 157, in get_template_from_string
+    return Template(source, origin, name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\defaulttags.py", line 904, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "c:\Python27\lib\site-packages\django\template\defaulttags.py", line 837, in __init__
+    super(TemplateIfParser, self).__init__(*args, **kwargs)
+  File "c:\Python27\lib\site-packages\django\template\smartif.py", line 163, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "c:\Python27\lib\site-packages\django\template\smartif.py", line 174, in translate_token
+    return self.create_var(token)
+  File "c:\Python27\lib\site-packages\django\template\defaulttags.py", line 840, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 353, in compile_filter
+    return FilterExpression(token, self)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 570, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '['pid_number']' from 'request.GET.['pid_number']'
+11/05/2013 10:45:35 AM : ERROR : Internal Server Error: /ndt_edit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\garyw\Desktop\NDT_demo\NDT_demo\views.py", line 28, in ndt_edit
+    return render(request, 'ndt_edit.html', stuff)
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 175, in render_to_string
+    context_instance.update(dictionary)
+  File "c:\Python27\lib\site-packages\django\template\context.py", line 106, in update
+    raise TypeError('other_dict must be a mapping (dictionary-like) object.')
+TypeError: other_dict must be a mapping (dictionary-like) object.
+11/05/2013 10:56:30 AM : ERROR : Internal Server Error: /ndt_edit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\garyw\Desktop\NDT_demo\NDT_demo\views.py", line 26, in ndt_edit
+    return render(request, 'ndt_edit.html', {'pid_number': get.REQUEST['pid_number']})
+NameError: global name 'get' is not defined
+11/05/2013 01:23:29 PM : ERROR : Internal Server Error: /ndt_new_submit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\garyw\Desktop\NDT_demo\NDT_demo\views.py", line 26, in ndt_new_submit
+    for k, v in request.GET:
+ValueError: too many values to unpack
+11/05/2013 01:32:45 PM : ERROR : Internal Server Error: /ndt_new_submit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\garyw\Desktop\NDT_demo\NDT_demo\views.py", line 26, in ndt_new_submit
+    for k, v in request.GET.urlencode():
+ValueError: need more than 1 value to unpack
+11/05/2013 01:37:45 PM : ERROR : Internal Server Error: /ndt_new_submit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\garyw\Desktop\NDT_demo\NDT_demo\views.py", line 26, in ndt_new_submit
+    return render(request, 'ndt_new_submit.html', {'pid_number': request.GET['pid_number'], 'query_dict': request.GET.iterlists()})
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 170, in render_to_string
+    t = get_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 146, in get_template
+    template, origin = find_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 135, in find_template
+    source, display_name = loader(name, dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 157, in get_template_from_string
+    return Template(source, origin, name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\defaulttags.py", line 769, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 253, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 353, in compile_filter
+    return FilterExpression(token, self)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 570, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '(k)' from 'str(k)'
+11/05/2013 03:02:18 PM : ERROR : Internal Server Error: /ndt_new_submit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\garyw\Desktop\NDT_demo\NDT_demo\views.py", line 26, in ndt_new_submit
+    return render(request, 'ndt_new_submit.html', {'pid_number': request.GET['pid_number'], 'query_dict': request.GET.iterlists()})
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 170, in render_to_string
+    t = get_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 146, in get_template
+    template, origin = find_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 135, in find_template
+    source, display_name = loader(name, dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 157, in get_template_from_string
+    return Template(source, origin, name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 253, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 353, in compile_filter
+    return FilterExpression(token, self)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 570, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '['design_standard']' from 'query_dict['design_standard']'
+11/05/2013 03:07:49 PM : ERROR : Internal Server Error: /ndt_new_submit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\garyw\Desktop\NDT_demo\NDT_demo\views.py", line 26, in ndt_new_submit
+    return render(request, 'ndt_new_submit.html', {'pid_number': request.GET['pid_number'], 'query_dict': request.GET.iterlists()})
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 170, in render_to_string
+    t = get_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 146, in get_template
+    template, origin = find_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 135, in find_template
+    source, display_name = loader(name, dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 157, in get_template_from_string
+    return Template(source, origin, name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 253, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 353, in compile_filter
+    return FilterExpression(token, self)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 564, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 359, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+TemplateSyntaxError: Invalid filter: 'design_standard'
+11/05/2013 03:10:27 PM : ERROR : Internal Server Error: /ndt_new_submit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\garyw\Desktop\NDT_demo\NDT_demo\views.py", line 26, in ndt_new_submit
+    return render(request, 'ndt_new_submit.html', {'pid_number': request.GET['pid_number'], 'query_dict': request.GET.iterlists()})
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 170, in render_to_string
+    t = get_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 146, in get_template
+    template, origin = find_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 135, in find_template
+    source, display_name = loader(name, dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 157, in get_template_from_string
+    return Template(source, origin, name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 253, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 353, in compile_filter
+    return FilterExpression(token, self)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 564, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 359, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+TemplateSyntaxError: Invalid filter: 'design_standard'
+11/05/2013 03:10:50 PM : ERROR : Internal Server Error: /ndt_new_submit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "c:\Users\garyw\Desktop\NDT_demo\NDT_demo\views.py", line 26, in ndt_new_submit
+    return render(request, 'ndt_new_submit.html', {'pid_number': request.GET['pid_number'], 'query_dict': request.GET.iterlists()})
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 170, in render_to_string
+    t = get_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 146, in get_template
+    template, origin = find_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 135, in find_template
+    source, display_name = loader(name, dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 157, in get_template_from_string
+    return Template(source, origin, name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 253, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 353, in compile_filter
+    return FilterExpression(token, self)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 570, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: ':design_standard' from 'query_dict:design_standard'
+11/19/2013 11:07:12 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in ndt_index
+    logging.debug("{}".format(settings.DATABASE.NAME))
+  File "c:\Python27\lib\site-packages\django\conf\__init__.py", line 55, in __getattr__
+    return getattr(self._wrapped, name)
+AttributeError: 'Settings' object has no attribute 'DATABASE'
+11/19/2013 11:12:03 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in ndt_index
+    logging.debug("{}".format(request.session['USERDNSDOMAIN']))
+  File "c:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'USERDNSDOMAIN'
+11/19/2013 11:13:12 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in ndt_index
+    logging.debug("{}".format(request.session.iteritems()))
+  File "c:\Python27\lib\site-packages\django\contrib\sessions\backends\base.py", line 47, in __getitem__
+    return self._session[key]
+KeyError: 'USERDNSDOMAIN'
+11/19/2013 11:13:13 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in ndt_index
+    logging.debug("{}".format(request.session.iteritems()))
+TypeError: Type dictionary-itemiterator doesn't define __format__
+11/19/2013 11:15:14 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in ndt_index
+    logging.debug("{}".format(session.items()))
+NameError: global name 'session' is not defined
+11/19/2013 11:15:26 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in ndt_index
+    logging.debug("{}".format(SESSION.items()))
+NameError: global name 'session' is not defined
+11/19/2013 11:15:27 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in ndt_index
+    logging.debug("{}".format(SESSION.items()))
+NameError: global name 'SESSION' is not defined
+11/19/2013 11:16:12 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in ndt_index
+    logging.debug("{}".format(settings.DATABASE['NAME']))
+  File "c:\Python27\lib\site-packages\django\conf\__init__.py", line 55, in __getattr__
+    return getattr(self._wrapped, name)
+AttributeError: 'Settings' object has no attribute 'DATABASE'
+11/19/2013 11:18:10 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in ndt_index
+    logging.debug("{}".format(settings.DATABASES.NAME))
+AttributeError: 'dict' object has no attribute 'NAME'
+11/19/2013 11:18:24 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in ndt_index
+    logging.debug("{}".format(settings.DATABASES['NAME']))
+KeyError: 'NAME'
+11/19/2013 11:19:33 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in ndt_index
+    logging.debug("{}".format(settings.DATABASES('NAME')))
+TypeError: 'dict' object is not callable
+11/19/2013 11:20:39 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in ndt_index
+    logging.debug("{}".format(settings.DATABASES['NAME']))
+KeyError: 'NAME'
+11/19/2013 11:20:58 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in ndt_index
+    logging.debug("{}".format(settings.DATABASES.NAME))
+AttributeError: 'dict' object has no attribute 'NAME'
+11/19/2013 11:21:55 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in ndt_index
+    logging.debug("{}".format(settings.DATABASES.default['NAME']))
+AttributeError: 'dict' object has no attribute 'default'
+11/19/2013 11:32:02 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 101, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 318, in resolve
+    for pattern in self.url_patterns:
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 346, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 341, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\urls.py", line 3, in <module>
+    import views
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 11, in <module>
+    import shared_common.shared.db as database
+ImportError: No module named shared.db
+11/19/2013 12:18:10 PM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 14, in ndt_index
+    logging.debug('{}'.format(database.create_ndt('123456','EVO_Cagg')))
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\shared_common\shared_db.py", line 40, in create_ndt
+    scale_unit))
+  File "c:\Python27\lib\site-packages\MySQLdb\cursors.py", line 201, in execute
+    self.errorhandler(self, exc, value)
+  File "c:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry '123456' for key 'pid_UNIQUE'")
+11/19/2013 12:20:41 PM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 14, in ndt_index
+    logging.debug('{}'.format(database.create_ndt('123456','EVO_Cagg')))
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\shared_common\shared_db.py", line 40, in create_ndt
+    scale_unit))
+  File "c:\Python27\lib\site-packages\MySQLdb\cursors.py", line 201, in execute
+    self.errorhandler(self, exc, value)
+  File "c:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1062, "Duplicate entry '123456' for key 'pid_UNIQUE'")
+11/19/2013 12:48:12 PM : ERROR : Internal Server Error: /ndt_new
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 38, in ndt_new
+    logging.error({}.format(e))
+AttributeError: 'dict' object has no attribute 'format'
+11/19/2013 12:48:52 PM : ERROR : "'pid'"
+11/19/2013 12:49:50 PM : ERROR : "'pid'"
+11/19/2013 12:49:55 PM : ERROR : "'pid'"
+11/19/2013 12:56:15 PM : ERROR : "'pid'"
+11/19/2013 12:57:21 PM : ERROR : "'pid'"
+11/19/2013 01:08:54 PM : ERROR : "'pid'"
+11/19/2013 01:11:51 PM : ERROR : "'pid'"
+11/19/2013 01:13:42 PM : ERROR : "'pid'"
+11/19/2013 01:19:16 PM : ERROR : "'pid'"
+11/19/2013 01:20:54 PM : ERROR : "'pid'"
+11/19/2013 01:21:58 PM : ERROR : "'pid'"
+11/19/2013 01:22:51 PM : ERROR : "'pid'"
+11/19/2013 01:30:35 PM : ERROR : "'pid'"
+11/19/2013 01:31:23 PM : ERROR : (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''pid', 'scale_unit') VALUES(123456,EVO_Cagg)' at line 1")
+11/19/2013 01:32:01 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'field list'")
+11/19/2013 01:33:19 PM : ERROR : (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'"pid", "scale_unit") VALUES(123456,EVO_Cagg)\' at line 1')
+11/19/2013 01:36:01 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'field list'")
+11/19/2013 01:36:37 PM : ERROR : (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'"pid", "scale_unit") VALUES(123456,EVO_Cagg)\' at line 1')
+11/19/2013 01:39:49 PM : ERROR : (1062, "Duplicate entry ''123456'' for key 'pid'")
+11/19/2013 01:40:10 PM : ERROR : (1062, "Duplicate entry ''123456'' for key 'pid'")
+11/19/2013 01:41:48 PM : ERROR : (1062, "Duplicate entry ''123456'' for key 'pid'")
+11/19/2013 01:42:42 PM : ERROR : (1062, "Duplicate entry ''123456'' for key 'pid'")
+11/19/2013 03:21:45 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'where clause'")
+11/19/2013 03:23:12 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'where clause'")
+11/19/2013 03:24:31 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'where clause'")
+11/19/2013 03:25:37 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'where clause'")
+11/19/2013 03:29:19 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'where clause'")
+11/19/2013 03:31:12 PM : ERROR : Internal Server Error: /ndt_new
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 90, in get_response
+    response = middleware_method(request)
+  File "c:\Python27\lib\site-packages\django\middleware\common.py", line 71, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 573, in is_valid_path
+    resolve(path, urlconf)
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 453, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 318, in resolve
+    for pattern in self.url_patterns:
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 346, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 341, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\urls.py", line 3, in <module>
+    import views
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 12, in <module>
+    import shared_common.shared_db as database
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\shared_common\shared_db.py", line 87
+    cursor.execute("""SELECT xml_template_filename FROM scale_unit_index WHERE xml_template_filename = "'{}'"""".format(scale_unit))
+                                                                                                                                   ^
+SyntaxError: EOL while scanning string literal
+11/19/2013 03:31:46 PM : ERROR : [Errno 2] No such file or directory: 'C:/Users/garyw/Desktop/django_apps/NDT_demo/NDT_demo/scale_unit_xml/()'
+11/19/2013 03:31:46 PM : ERROR : [Errno 2] No such file or directory: 'C:/Users/garyw/Desktop/django_apps/NDT_demo/NDT_demo/scale_unit_xml/()'
+11/19/2013 03:33:35 PM : ERROR : [Errno 2] No such file or directory: 'C:/Users/garyw/Desktop/django_apps/NDT_demo/NDT_demo/scale_unit_xml/()'
+11/19/2013 03:35:55 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'where clause'")
+11/19/2013 03:36:38 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'where clause'")
+11/19/2013 03:37:45 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'where clause'")
+11/19/2013 03:41:15 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'where clause'")
+11/19/2013 03:42:30 PM : ERROR : Internal Server Error: /ndt_new
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 64, in ndt_new
+    return render(request, 'ndt_new.html', {'pid_number': request.POST['pid_number'], 'xml_variables': xml_variables})
+NameError: global name 'xml_variables' is not defined
+11/19/2013 03:44:53 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'where clause'")
+11/19/2013 03:45:31 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'where clause'")
+11/19/2013 03:48:31 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'where clause'")
+11/19/2013 03:48:40 PM : ERROR : [Errno 2] No such file or directory: "C:/Users/garyw/Desktop/django_apps/NDT_demo/NDT_demo/scale_unit_xml/(('template_evo_cagg.xml',),)"
+11/19/2013 03:51:24 PM : ERROR : [Errno 2] No such file or directory: "C:/Users/garyw/Desktop/django_apps/NDT_demo/NDT_demo/scale_unit_xml/[('template_evo_cagg.xml',)]"
+11/19/2013 03:54:05 PM : ERROR : [Errno 2] No such file or directory: "C:/Users/garyw/Desktop/django_apps/NDT_demo/NDT_demo/scale_unit_xml/['t']"
+11/19/2013 03:55:22 PM : ERROR : [Errno 2] No such file or directory: "C:/Users/garyw/Desktop/django_apps/NDT_demo/NDT_demo/scale_unit_xml/('template_evo_cagg.xml',)"
+11/19/2013 03:55:32 PM : ERROR : [Errno 2] No such file or directory: "C:/Users/garyw/Desktop/django_apps/NDT_demo/NDT_demo/scale_unit_xml/('template_evo_cagg.xml',)"
+11/19/2013 04:16:11 PM : ERROR : not well-formed (invalid token): line 8, column 226
+11/19/2013 05:21:02 PM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 21, in ndt_index
+    return render(request, 'ndt_frontpage.html', {'scale_units': scale_units})
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'endblock', expected 'empty' or 'endfor'
+11/19/2013 08:47:15 PM : ERROR : fetch_xml_template() takes exactly 1 argument (2 given)
+11/19/2013 08:48:38 PM : ERROR : fetch_xml_template() takes exactly 1 argument (2 given)
+11/19/2013 08:48:46 PM : ERROR : [Errno 2] No such file or directory: '{}/{}'
+11/20/2013 10:57:10 AM : ERROR : "'pid_number'"
+11/20/2013 10:58:31 AM : ERROR : "'pid_number'"
+11/20/2013 11:03:49 AM : ERROR : "'pid_number'"
+11/20/2013 12:39:48 PM : ERROR : global name 'fetch_base_standard_url' is not defined
+11/20/2013 12:41:26 PM : ERROR : Internal Server Error: /ndt_new
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 90, in get_response
+    response = middleware_method(request)
+  File "c:\Python27\lib\site-packages\django\middleware\common.py", line 71, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 573, in is_valid_path
+    resolve(path, urlconf)
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 453, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 318, in resolve
+    for pattern in self.url_patterns:
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 346, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 341, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\urls.py", line 3, in <module>
+    import views
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 15, in <module>
+    from shared_common.shared_xml import xml_read_variables, base_standard_url
+ImportError: cannot import name base_standard_url
+11/20/2013 12:42:30 PM : ERROR : unbound prefix: line 23, column 4
+11/20/2013 12:42:30 PM : ERROR : unbound prefix: line 23, column 4
+11/20/2013 12:52:38 PM : ERROR : "'pid_number'"
+11/20/2013 12:54:38 PM : ERROR : "'pid_number'"
+11/20/2013 12:55:42 PM : ERROR : "'pid_number'"
+11/20/2013 12:55:54 PM : ERROR : "'pid_number'"
+11/20/2013 01:02:43 PM : ERROR : "'pid_number'"
+11/20/2013 01:03:32 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'field list'")
+11/20/2013 01:04:39 PM : ERROR : (1054, "Unknown column 'EVO_Cagg' in 'field list'")
+11/20/2013 01:05:20 PM : ERROR : (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1")
+11/20/2013 01:06:07 PM : ERROR : Internal Server Error: /ndt_new_submit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 90, in get_response
+    response = middleware_method(request)
+  File "c:\Python27\lib\site-packages\django\middleware\common.py", line 71, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 573, in is_valid_path
+    resolve(path, urlconf)
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 453, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 318, in resolve
+    for pattern in self.url_patterns:
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 346, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 341, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\urls.py", line 3, in <module>
+    import views
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 12, in <module>
+    import shared_common.shared_db as database
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\shared_common\shared_db.py", line 46
+    cursor.execute("INSERT INTO ndt_index (pid, scale_unit) VALUES("{}","{}"".format(pid,
+                                                                    ^
+SyntaxError: invalid syntax
+11/20/2013 01:07:04 PM : ERROR : [Errno 2] No such file or directory: 'static/in_progress_ndt_xml/123456_template_evo_cagg.xml.xml'
+11/20/2013 01:07:04 PM : ERROR : [Errno 2] No such file or directory: 'static/in_progress_ndt_xml/123456_template_evo_cagg.xml.xml'
+11/20/2013 01:12:34 PM : ERROR : (1062, "Duplicate entry ''123456'' for key 'pid'")
+11/20/2013 01:14:07 PM : ERROR : [Errno 2] No such file or directory: 'static/in_progress_ndt_xml/123456_template_evo_cagg.xml'
+11/20/2013 01:15:32 PM : ERROR : [Errno 2] No such file or directory: 'static/in_progress_ndt_xml/123456_template_evo_cagg.xml'
+11/20/2013 01:20:46 PM : ERROR : [Errno 2] No such file or directory: 'C:/Users/garyw/Desktop/django_apps/NDT_demo/static/in_progress_ndt_xml/123456_template_evo_cagg.xml'
+11/20/2013 01:28:43 PM : ERROR : 'file' object has no attribute 'replace'
+11/20/2013 01:30:45 PM : ERROR : global name 'xml_templatelines' is not defined
+11/20/2013 01:31:02 PM : ERROR : 'list' object has no attribute 'replace'
+11/20/2013 01:34:27 PM : ERROR : global name 'xml_template_lines' is not defined
+11/20/2013 01:49:45 PM : ERROR : too many values to unpack
+11/20/2013 03:21:09 PM : ERROR : [Errno 2] No such file or directory: "('template_evo_cagg.xml',)"
+11/20/2013 03:21:35 PM : ERROR : [Errno 2] No such file or directory: "('template_evo_cagg.xml',)"
+11/20/2013 03:21:51 PM : ERROR : [Errno 2] No such file or directory: "('template_evo_cagg.xml',)"
+11/20/2013 03:33:44 PM : ERROR : not well-formed (invalid token): line 156, column 150
+11/21/2013 01:29:52 PM : ERROR : (1062, "Duplicate entry ''123456'' for key 'pid'")
+11/22/2013 08:49:05 AM : ERROR : tuple index out of range
+11/22/2013 10:21:35 AM : ERROR : insert_form_key_value() takes exactly 5 arguments (4 given)
+11/22/2013 10:22:29 AM : ERROR : tuple index out of range
+11/22/2013 10:23:33 AM : ERROR : (1136, "Column count doesn't match value count at row 1")
+11/22/2013 10:24:20 AM : ERROR : "'edit_tab'"
+11/22/2013 10:29:51 AM : ERROR : "'edit_tab'"
+11/22/2013 10:32:06 AM : ERROR : global name 'new_key' is not defined
+11/22/2013 10:33:41 AM : ERROR : global name 'new_key' is not defined
+11/22/2013 10:35:46 AM : ERROR : "'edit_tab'"
+11/22/2013 10:39:09 AM : ERROR : (1054, "Unknown column 'edit_tab' in 'field list'")
+11/22/2013 11:08:15 AM : ERROR : (1136, "Column count doesn't match value count at row 1")
+11/22/2013 11:08:50 AM : ERROR : string index out of range
+11/22/2013 11:12:40 AM : ERROR : string index out of range
+11/22/2013 11:14:34 AM : ERROR : string index out of range
+11/22/2013 11:36:50 AM : ERROR : append() takes exactly one argument (4 given)
+11/22/2013 11:40:46 AM : ERROR : Internal Server Error: /ndt_new_submit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 178, in ndt_new_submit
+    'variables_tab_db_data': var_data})
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'endif', expected 'empty' or 'endfor'
+11/22/2013 11:42:18 AM : ERROR : Internal Server Error: /ndt_new_submit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 178, in ndt_new_submit
+    'variables_tab_db_data': var_data})
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\defaulttags.py", line 803, in do_for
+    " %s" % token.contents)
+TemplateSyntaxError: 'for' tag received an invalid argument: for pid scale_unit key value in entry
+11/25/2013 04:02:47 PM : ERROR : Internal Server Error: /ndt_new_submit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 169, in ndt_new_submit
+    'xml_variables': xml_variables})
+NameError: global name 'xml_variables' is not defined
+11/26/2013 09:38:05 AM : ERROR : Internal Server Error: /ndt_new_submit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 177, in ndt_new_submit
+    'xml_variables': xml_variables, 'db_results': stored_variable_data})
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\defaulttags.py", line 942, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\defaulttags.py", line 942, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'endif', expected 'empty' or 'endfor'
+11/26/2013 09:48:32 AM : ERROR : Internal Server Error: /ndt_new_submit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 177, in ndt_new_submit
+    'xml_variables': xml_variables, 'db_results': stored_variable_data})
+  File "c:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "c:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "c:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "c:\Python27\lib\site-packages\django\template\base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'endif', expected 'empty' or 'endfor'
+11/26/2013 10:56:49 AM : ERROR : 'tuple' object has no attribute 'split'
+11/26/2013 11:46:03 AM : ERROR : Internal Server Error: /
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 101, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 318, in resolve
+    for pattern in self.url_patterns:
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 346, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "c:\Python27\lib\site-packages\django\core\urlresolvers.py", line 341, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "c:\Python27\lib\site-packages\django\utils\importlib.py", line 40, in import_module
+    __import__(name)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\urls.py", line 9, in <module>
+    url(r'^ndt_edit$', views.ndt_edit, name='ndt_edit'),
+AttributeError: 'module' object has no attribute 'ndt_edit'
+11/26/2013 12:53:04 PM : ERROR : "'pid_number'"
+11/26/2013 12:56:29 PM : ERROR : "'pid_number'"
+11/26/2013 12:56:41 PM : ERROR : "'scale_unit'"
+11/26/2013 12:59:22 PM : ERROR : "'scale_unit'"
+11/26/2013 03:36:29 PM : ERROR : Internal Server Error: /ndt_edit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    raise ValueError("The view %s.%s didn't return an HttpResponse object." % (callback.__module__, view_name))
+ValueError: The view NDT_demo.views.ndt_edit didn't return an HttpResponse object.
+11/27/2013 10:46:45 AM : ERROR : tuple index out of range
+11/27/2013 10:49:22 AM : ERROR : tuple index out of range
+11/27/2013 10:50:38 AM : ERROR : tuple index out of range
+11/27/2013 10:52:26 AM : ERROR : tuple index out of range
+11/27/2013 11:13:56 AM : ERROR : global name 'redirect' is not defined
+11/27/2013 11:15:08 AM : ERROR : 'str' object has no attribute 'META'
+11/27/2013 11:19:30 AM : ERROR : 'NoneType' object has no attribute 'split'
+11/27/2013 11:20:09 AM : ERROR : "'pid_number'"
+11/27/2013 11:20:34 AM : ERROR : global name 'http' is not defined
+11/27/2013 11:20:50 AM : ERROR : global name 'HttpResponseRedirect' is not defined
+11/27/2013 11:28:02 AM : ERROR : global name 'db_results' is not defined
+11/27/2013 11:30:02 AM : ERROR : local variable 'filename' referenced before assignment
+11/27/2013 11:33:27 AM : ERROR : local variable 'filename' referenced before assignment
+11/27/2013 11:34:38 AM : ERROR : local variable 'filename' referenced before assignment
+11/27/2013 11:37:14 AM : ERROR : local variable 'filename' referenced before assignment
+11/27/2013 02:27:42 PM : ERROR : local variable 'filename' referenced before assignment
+11/27/2013 02:29:39 PM : ERROR : local variable 'filename' referenced before assignment
+11/27/2013 02:34:22 PM : ERROR : local variable 'filename' referenced before assignment
+11/27/2013 02:36:39 PM : ERROR : local variable 'filename' referenced before assignment
+11/27/2013 02:37:04 PM : ERROR : Internal Server Error: /ndt_edit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 363, in ndt_edit
+    'scale_unit': request.POST['scale_unit']})
+  File "c:\Python27\lib\site-packages\django\utils\datastructures.py", line 301, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'scale_unit'"
+11/27/2013 02:41:05 PM : ERROR : Internal Server Error: /ndt_edit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 365, in ndt_edit
+    'scale_unit': request.POST['scale_unit']})
+  File "c:\Python27\lib\site-packages\django\utils\datastructures.py", line 301, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'scale_unit'"
+11/27/2013 02:42:48 PM : ERROR : Internal Server Error: /ndt_new_submit
+Traceback (most recent call last):
+  File "c:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\garyw\Desktop\django_apps\NDT_demo\NDT_demo\views.py", line 211, in ndt_new_submit
+    'pid_number': request.POST['pid_number'], 'scale_unit': request.post['scale_unit']})
+AttributeError: 'WSGIRequest' object has no attribute 'post'
+12/06/2013 08:25:32 AM : ERROR : not well-formed (invalid token): line 2, column 66
+12/06/2013 08:28:24 AM : ERROR : not well-formed (invalid token): line 2, column 66
+01/16/2014 09:25:43 AM : ERROR : Internal Server Error: /ndt_edit
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\garyw\dev_workspace\auto_ndt\NDT_demo\views.py", line 366, in ndt_edit
+    'xml_interfaces': xml_interfaces})
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 941, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "C:\Python27\lib\site-packages\django\template\smartif.py", line 187, in parse
+    retval = self.expression()
+  File "C:\Python27\lib\site-packages\django\template\smartif.py", line 201, in expression
+    left = t.led(left, self)
+  File "C:\Python27\lib\site-packages\django\template\smartif.py", line 29, in led
+    "Not expecting '%s' as infix operator in if tag." % self.id
+TemplateSyntaxError: Not expecting 'not' as infix operator in if tag.
+01/16/2014 09:28:10 AM : ERROR : Internal Server Error: /ndt_edit
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\garyw\dev_workspace\auto_ndt\NDT_demo\views.py", line 366, in ndt_edit
+    'xml_interfaces': xml_interfaces})
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 856, in ifnotequal
+    return do_ifequal(parser, token, True)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 818, in do_ifequal
+    raise TemplateSyntaxError("%r takes two arguments" % bits[0])
+TemplateSyntaxError: u'ifnotequal' takes two arguments
+01/16/2014 09:29:09 AM : ERROR : Internal Server Error: /ndt_edit
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\garyw\dev_workspace\auto_ndt\NDT_demo\views.py", line 366, in ndt_edit
+    'xml_interfaces': xml_interfaces})
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 856, in ifnotequal
+    return do_ifequal(parser, token, True)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 820, in do_ifequal
+    nodelist_true = parser.parse(('else', end_tag))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 856, in ifnotequal
+    return do_ifequal(parser, token, True)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 820, in do_ifequal
+    nodelist_true = parser.parse(('else', end_tag))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'endif', expected 'else' or 'endifnotequal'
+01/16/2014 09:40:05 AM : ERROR : Internal Server Error: /ndt_edit
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 114, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python27\lib\site-packages\django\views\decorators\csrf.py", line 57, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\garyw\dev_workspace\auto_ndt\NDT_demo\views.py", line 366, in ndt_edit
+    'xml_interfaces': xml_interfaces})
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 162, in render_to_string
+    t = get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 806, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 856, in ifnotequal
+    return do_ifequal(parser, token, True)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 820, in do_ifequal
+    nodelist_true = parser.parse(('else', end_tag))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 856, in ifnotequal
+    return do_ifequal(parser, token, True)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 820, in do_ifequal
+    nodelist_true = parser.parse(('else', end_tag))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 941, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "C:\Python27\lib\site-packages\django\template\smartif.py", line 191, in parse
+    self.current_token.display())
+TemplateSyntaxError: Unused 'contains' at end of if expression.
+01/16/2014 09:55:24 AM : ERROR : unclosed token: line 239, column 4
+01/16/2014 09:57:01 AM : ERROR : unclosed token: line 239, column 4
+01/16/2014 10:03:25 AM : ERROR : unclosed token: line 239, column 4
+01/16/2014 10:44:06 AM : ERROR : unclosed token: line 239, column 4
+01/16/2014 10:51:29 AM : ERROR : unclosed token: line 239, column 4
+01/16/2014 10:54:36 AM : ERROR : unclosed token: line 239, column 4
+01/16/2014 10:54:57 AM : ERROR : unclosed token: line 239, column 4
+01/16/2014 01:45:09 PM : ERROR : unclosed token: line 245, column 4
+01/16/2014 01:48:54 PM : ERROR : unclosed token: line 245, column 4
+01/16/2014 01:56:29 PM : ERROR : unclosed token: line 245, column 4
+01/16/2014 02:19:26 PM : ERROR : unclosed token: line 244, column 4
+01/16/2014 02:23:12 PM : ERROR : unclosed token: line 245, column 4
