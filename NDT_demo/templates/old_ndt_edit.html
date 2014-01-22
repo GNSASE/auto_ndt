@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!--#!!! Begin javascript datepicker-->
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+    $( "#format" ).change(function() {
+      $( "#datepicker" ).datepicker( "option", "dateFormat", $( 'yy-mm-dd' ) );
+    });
+  });
+  </script>
+  <!--#!!! End javascript for datepicker-->
+<!--#!!! Begin javascript form validation-->
+<script>
+function validateNewNDTForm()
+{
+var x=document.forms["new_ndt"]["pid_number"].value;
+if (x==null || x=="")
+  {
+  alert("PID number required, please enter a valid PID number.");
+  return false;
+  }
+}
+function validateEditNDTForm()
+{
+var x=document.forms["edit_ndt"]["pid_number"].value;
+if (x==null || x=="")
+  {
+  alert("PID number required, please enter a valid PID number.");
+  return false;
+  }
+}
+</script>
+<!--#!!! End javascript form validation-->
+      <p><strong>Content here.</strong></p>
+      <p>This would be the NDT webform for selection of an existing NDT webform.<br>
+        You entered PID number: {% if pid_number %} REQUEST EXISTS {{ pid_number }} {% endif %}</p>
+
+{% endblock %}

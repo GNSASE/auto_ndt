@@ -1,0 +1,323 @@
+<?xml version= "1.0"?>
+<Deployment>
+  <!-- ******** IMPORTANT *********
+    These are the variables that will drive the relationship between user prompted variables and template objects
+       ******** IMPORTANT *********-->
+  <Variables>
+    <DC friendly_name="Datacenter (DC)" edit_tab="variable" form_phase="1" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="The datacenter code for the NDT."/>
+    <STAMP friendly_name="Stamp code" edit_tab="variable" form_phase="1" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="Fill in the blank description..."/>
+    <PROPERTY friendly_name="Property code" edit_tab="variable" form_phase="1" form_type="text" form_element_locked="yes" form_default_value="hot" form_attrib="" desc="The property group that the network is being deployed for ie. hotmail = hot."/>
+    <AGG_INSTANCE_NUM friendly_name="Aggregate Instance Number" edit_tab="variable" form_phase="1" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="The instance number of the aggregation switches."/>
+    <L3AGG_PREF friendly_name="L3 agg pair naming scheme" edit_tab="variable" form_phase="1" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="Layer 3 aggregate routing naming scheme (A/B will be appended to the end automatically)."/>
+    <LB_PREF friendly_name="LB pair naming scheme" edit_tab="variable" form_phase="1" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="Load balancer naming scheme (A/B will be appended to the end automatically)."/>
+    <L3AGG_SKU friendly_name="L3 agg pair HW sku" edit_tab="variable" form_phase="1" form_type="text" form_element_locked="no" form_default_value="Nexus 3064X" form_attrib="" desc="Layer 3 aggregate routing hardware platform sku ie.(Nexus 3064X)."/>
+    <LB_SKU friendly_name="LB pair HW sku" edit_tab="variable" form_phase="1" form_type="text" form_element_locked="yes" form_default_value="F5 Bigip 8950" form_attrib="" desc="Load balancer hardware platform sku ie.(F5 Bigip 8950)."/>
+    <BE_TOR_SKU friendly_name="BE TOR HW sku" edit_tab="variable" form_phase="1" form_type="text" form_element_locked="yes" form_default_value="Nexus 3048" form_attrib="" desc="BackEnd top of rack switch hardware platform sku ie.(Nexus 3048)."/>
+    <XE_TOR_SKU friendly_name="XE TOR HW sku" edit_tab="variable" form_phase="1" form_type="text" form_element_locked="yes" form_default_value="Nexus 3048" form_attrib="" desc="XE top of rack switch hardware platform sku ie.(Nexus 3048)."/>
+    <DCFX_PREF friendly_name="DCFX naming scheme" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="DCFX naming scheme"/>
+    <TOR_OOB_SW_A friendly_name="TOR x34b 01a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="*TYPING INPUT INTO THIS BOX WILL REPLICATE TO THE OTHER OOB TOR TEXTBOX. TOR x34b 01a OOB switch"/>
+    <TOR_OOB_SW_B friendly_name="TOR x34b 01b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 01b OOB switch"/>
+    <TOR_OOB_SW_C friendly_name="TOR x34b 02a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 02a OOB switch"/>
+    <TOR_OOB_SW_D friendly_name="TOR x34b 02b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 02b OOB switch"/>
+    <TOR_OOB_SW_E friendly_name="TOR x34b 03a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 03a OOB switch"/>
+    <TOR_OOB_SW_F friendly_name="TOR x34b 03b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 03b OOB switch"/>
+    <TOR_OOB_SW_G friendly_name="TOR x34b 04a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 04a OOB switch"/>
+    <TOR_OOB_SW_H friendly_name="TOR x34b 04b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 04b OOB switch"/>
+    <TOR_OOB_SW_I friendly_name="TOR x34b 05a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 05a OOB switch"/>
+    <TOR_OOB_SW_J friendly_name="TOR x34b 05b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 05b OOB switch"/>
+    <TOR_OOB_SW_K friendly_name="TOR x34b 06a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 06a OOB switch"/>
+    <TOR_OOB_SW_L friendly_name="TOR x34b 06b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 06b OOB switch"/>
+    <TOR_OOB_SW_M friendly_name="TOR x34b 07a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 07a OOB switch"/>
+    <TOR_OOB_SW_N friendly_name="TOR x34b 07b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 07b OOB switch"/>
+    <TOR_OOB_SW_O friendly_name="TOR x34b 08a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 08a OOB switch"/>
+    <TOR_OOB_SW_P friendly_name="TOR x34b 08b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 08b OOB switch"/>
+    <TOR_OOB_SW_Q friendly_name="TOR x34b 09a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 09a OOB switch"/>
+    <TOR_OOB_SW_R friendly_name="TOR x34b 09b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 09b OOB switch"/>
+    <TOR_OOB_SW_S friendly_name="TOR x34b 10a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 10a OOB switch"/>
+    <TOR_OOB_SW_T friendly_name="TOR x34b 10b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 10b OOB switch"/>
+    <TOR_OOB_SW_U friendly_name="TOR x34b 11a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 11a OOB switch"/>
+    <TOR_OOB_SW_V friendly_name="TOR x34b 11b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 11b OOB switch"/>
+    <TOR_OOB_SW_W friendly_name="TOR x34b 12a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 12a OOB switch"/>
+    <TOR_OOB_SW_X friendly_name="TOR x34b 12b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 12b OOB switch"/>
+    <TOR_OOB_SW_Y friendly_name="TOR x34x 01a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 01a OOB switch"/>
+    <TOR_OOB_SW_Z friendly_name="TOR x34x 01b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 01b OOB switch"/>
+    <TOR_OOB_SW_AA friendly_name="TOR x34x 02a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 02a OOB switch"/>
+    <TOR_OOB_SW_AB friendly_name="TOR x34x 02b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 02b OOB switch"/>
+    <TOR_OOB_SW_AC friendly_name="TOR x34x 03a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 03a OOB switch"/>
+    <TOR_OOB_SW_AD friendly_name="TOR x34x 03b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 03b OOB switch"/>
+    <TOR_OOB_SW_AE friendly_name="TOR x34x 04a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 04a OOB switch"/>
+    <TOR_OOB_SW_AF friendly_name="TOR x34x 04b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 04b OOB switch"/>
+    <TOR_OOB_SW_AG friendly_name="TOR x34x 05a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 05a OOB switch"/>
+    <TOR_OOB_SW_AH friendly_name="TOR x34x 05b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 05b OOB switch"/>
+    <TOR_OOB_SW_AI friendly_name="TOR x34x 06a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 06a OOB switch"/>
+    <TOR_OOB_SW_AJ friendly_name="TOR x34x 06b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 06b OOB switch"/>
+    <TOR_OOB_SW_AK friendly_name="TOR x34x 07a OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 07a OOB switch"/>
+    <TOR_OOB_SW_AL friendly_name="TOR x34x 07b OOB switch" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 07b OOB switch"/>
+    <TOR_OOB_SW_PORT_A friendly_name="TOR x34b 01a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="*TYPING INPUT INTO THIS BOX WILL REPLICATE TO THE OTHER OOB TOR PORT TEXTBOX. TOR x34b 01a OOB switch port"/>
+    <TOR_OOB_SW_PORT_B friendly_name="TOR x34b 01b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 01b OOB switch port"/>
+    <TOR_OOB_SW_PORT_C friendly_name="TOR x34b 02a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 02a OOB switch port"/>
+    <TOR_OOB_SW_PORT_D friendly_name="TOR x34b 02b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 02b OOB switch port"/>
+    <TOR_OOB_SW_PORT_E friendly_name="TOR x34b 03a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 03a OOB switch port"/>
+    <TOR_OOB_SW_PORT_F friendly_name="TOR x34b 03b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 03b OOB switch port"/>
+    <TOR_OOB_SW_PORT_G friendly_name="TOR x34b 04a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 04a OOB switch port"/>
+    <TOR_OOB_SW_PORT_H friendly_name="TOR x34b 04b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 04b OOB switch port"/>
+    <TOR_OOB_SW_PORT_I friendly_name="TOR x34b 05a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 05a OOB switch port"/>
+    <TOR_OOB_SW_PORT_J friendly_name="TOR x34b 05b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 05b OOB switch port"/>
+    <TOR_OOB_SW_PORT_K friendly_name="TOR x34b 06a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 06a OOB switch port"/>
+    <TOR_OOB_SW_PORT_L friendly_name="TOR x34b 06b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 06b OOB switch port"/>
+    <TOR_OOB_SW_PORT_M friendly_name="TOR x34b 07a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 07a OOB switch port"/>
+    <TOR_OOB_SW_PORT_N friendly_name="TOR x34b 07b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 07b OOB switch port"/>
+    <TOR_OOB_SW_PORT_O friendly_name="TOR x34b 08a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 08a OOB switch port"/>
+    <TOR_OOB_SW_PORT_P friendly_name="TOR x34b 08b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 08b OOB switch port"/>
+    <TOR_OOB_SW_PORT_Q friendly_name="TOR x34b 09a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 09a OOB switch port"/>
+    <TOR_OOB_SW_PORT_R friendly_name="TOR x34b 09b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 09b OOB switch port"/>
+    <TOR_OOB_SW_PORT_S friendly_name="TOR x34b 10a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 10a OOB switch port"/>
+    <TOR_OOB_SW_PORT_T friendly_name="TOR x34b 10b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 10b OOB switch port"/>
+    <TOR_OOB_SW_PORT_U friendly_name="TOR x34b 11a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 11a OOB switch port"/>
+    <TOR_OOB_SW_PORT_V friendly_name="TOR x34b 11b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 11b OOB switch port"/>
+    <TOR_OOB_SW_PORT_W friendly_name="TOR x34b 12a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 12a OOB switch port"/>
+    <TOR_OOB_SW_PORT_X friendly_name="TOR x34b 12b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34b 12b OOB switch port"/>
+    <TOR_OOB_SW_PORT_Y friendly_name="TOR x34x 01a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 01a OOB switch port"/>
+    <TOR_OOB_SW_PORT_Z friendly_name="TOR x34x 01b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 01b OOB switch port"/>
+    <TOR_OOB_SW_PORT_AA friendly_name="TOR x34x 02a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 02a OOB switch port"/>
+    <TOR_OOB_SW_PORT_AB friendly_name="TOR x34x 02b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 02b OOB switch port"/>
+    <TOR_OOB_SW_PORT_AC friendly_name="TOR x34x 03a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 03a OOB switch port"/>
+    <TOR_OOB_SW_PORT_AD friendly_name="TOR x34x 03b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 03b OOB switch port"/>
+    <TOR_OOB_SW_PORT_AE friendly_name="TOR x34x 04a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 04a OOB switch port"/>
+    <TOR_OOB_SW_PORT_AF friendly_name="TOR x34x 04b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 04b OOB switch port"/>
+    <TOR_OOB_SW_PORT_AG friendly_name="TOR x34x 05a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 05a OOB switch port"/>
+    <TOR_OOB_SW_PORT_AH friendly_name="TOR x34x 05b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 05b OOB switch port"/>
+    <TOR_OOB_SW_PORT_AI friendly_name="TOR x34x 06a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 06a OOB switch port"/>
+    <TOR_OOB_SW_PORT_AJ friendly_name="TOR x34x 06b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 06b OOB switch port"/>
+    <TOR_OOB_SW_PORT_AK friendly_name="TOR x34x 07a OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 07a OOB switch port"/>
+    <TOR_OOB_SW_PORT_AL friendly_name="TOR x34x 07b OOB switch port" edit_tab="variable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="TOR x34x 07b OOB switch port"/>
+    <TEST_IP friendly_name="Test IP" edit_tab="ip_assignment" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="Test placeholder"/>
+    <TEST_INBAND_CABLING friendly_name="Test inband cabling" edit_tab="inb_cable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="Test placeholder"/>
+    <TEST_MGMT_CABLING friendly_name="Test management cabling" edit_tab="mgmt_cable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="Test placeholder"/>
+    <TEST_OOB_CABLING friendly_name="Test OOB cabling" edit_tab="oob_cable" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="Test placeholder"/>
+    <TEST_PORT_PLAN friendly_name="Test port planning" edit_tab="port_plan" form_phase="2" form_type="text" form_element_locked="no" form_default_value="" form_attrib="" desc="Test placeholder"/>
+  </Variables>
+  <!-- ******** IMPORTANT *********
+    Below this point are the actual toplogy objects that the variables above assignments will fill in.
+       ******** IMPORTANT *********-->
+  <Devices>
+    <Device type="L3Agg" Hostname="something-xxxa" HwSku="Nexus 3064X"/>
+    <Device type="L3Agg" Hostname="something-xxxb" HwSku="Nexus 3064X"/>
+    <Device type="LB" Hostname="something-yyya" HwSku="F5 Bigip 8950"/>
+    <Device type="LB" Hostname="something-yyyb" HwSku="F5 Bigip 8950"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-01a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-01b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-02a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-02b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-03a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-03b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-04a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-04b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-05a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-05b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-06a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-06b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-07a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-07b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-08a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-08b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-09a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-09b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-10a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-10b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-11a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-11b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-12a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34b-hot-something12-12b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34x-hot-something12-01a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34x-hot-something12-01b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34x-hot-something12-02a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34x-hot-something12-02b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34x-hot-something12-03a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34x-hot-something12-03b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34x-hot-something12-04a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34x-hot-something12-04b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34x-hot-something12-05a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34x-hot-something12-05b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34x-hot-something12-06a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34x-hot-something12-06b" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34x-hot-something12-07a" HwSku="Nexus 3048"/>
+    <Device type="TOR" Hostname="CO4-x34x-hot-something12-07b" HwSku="Nexus 3048"/>
+  </Devices>
+  <Interfaces>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/1" EndDevice="dcfx_somethingAALF" EndPort="%DCFX_PORT_A1%" Bandwidth="10000" ConnectionType="DCFX" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/2" EndDevice="dcfx_somethingBBLF" EndPort="%DCFX_PORT_A2%" Bandwidth="10000" ConnectionType="DCFX" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/3" EndDevice="dcfx_somethingCCLF" EndPort="%DCFX_PORT_A3%" Bandwidth="10000" ConnectionType="DCFX" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/4" EndDevice="dcfx_somethingDDLF" EndPort="%DCFX_PORT_A4%" Bandwidth="10000" ConnectionType="DCFX" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/1" EndDevice="dcfx_somethingAALF" EndPort="%DCFX_PORT_B1%" Bandwidth="10000" ConnectionType="DCFX" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/2" EndDevice="dcfx_somethingBBLF" EndPort="%DCFX_PORT_B2%" Bandwidth="10000" ConnectionType="DCFX" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/3" EndDevice="dcfx_somethingCCLF" EndPort="%DCFX_PORT_B3%" Bandwidth="10000" ConnectionType="DCFX" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/4" EndDevice="dcfx_somethingDDLF" EndPort="%DCFX_PORT_B4%" Bandwidth="10000" ConnectionType="DCFX" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/5" EndDevice="something-yyya" EndPort="3/1" Bandwidth="10000" ConnectionType="LB" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/6" EndDevice="something-yyyb" EndPort="3/1" Bandwidth="10000" ConnectionType="LB" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/5" EndDevice="something-yyya" EndPort="3/2" Bandwidth="10000" ConnectionType="LB" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/6" EndDevice="something-yyyb" EndPort="3/2" Bandwidth="10000" ConnectionType="LB" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/7" EndDevice="something-xxxb" EndPort="Ethernet1/7" Bandwidth="10000" ConnectionType="ISC" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/8" EndDevice="something-xxxb" EndPort="Ethernet1/8" Bandwidth="10000" ConnectionType="ISC" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/9" EndDevice="CO4-x34b-hot-something12-01a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/9" EndDevice="CO4-x34b-hot-something12-01a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/10" EndDevice="CO4-x34b-hot-something12-01b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/10" EndDevice="CO4-x34b-hot-something12-01b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/11" EndDevice="CO4-x34b-hot-something12-02a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/11" EndDevice="CO4-x34b-hot-something12-02a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/12" EndDevice="CO4-x34b-hot-something12-02b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/12" EndDevice="CO4-x34b-hot-something12-02b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/13" EndDevice="CO4-x34b-hot-something12-03a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/13" EndDevice="CO4-x34b-hot-something12-03a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/14" EndDevice="CO4-x34b-hot-something12-03b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/14" EndDevice="CO4-x34b-hot-something12-03b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/15" EndDevice="CO4-x34b-hot-something12-04a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/15" EndDevice="CO4-x34b-hot-something12-04a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/16" EndDevice="CO4-x34b-hot-something12-04b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/16" EndDevice="CO4-x34b-hot-something12-04b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/17" EndDevice="CO4-x34b-hot-something12-05a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/17" EndDevice="CO4-x34b-hot-something12-05a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/18" EndDevice="CO4-x34b-hot-something12-05b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/18" EndDevice="CO4-x34b-hot-something12-05b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/19" EndDevice="CO4-x34b-hot-something12-06a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/19" EndDevice="CO4-x34b-hot-something12-06a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/20" EndDevice="CO4-x34b-hot-something12-06b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/20" EndDevice="CO4-x34b-hot-something12-06b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/21" EndDevice="CO4-x34b-hot-something12-07a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/21" EndDevice="CO4-x34b-hot-something12-07a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/22" EndDevice="CO4-x34b-hot-something12-07b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/22" EndDevice="CO4-x34b-hot-something12-07b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/23" EndDevice="CO4-x34b-hot-something12-08a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/23" EndDevice="CO4-x34b-hot-something12-08a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/24" EndDevice="CO4-x34b-hot-something12-08b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/24" EndDevice="CO4-x34b-hot-something12-08b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/25" EndDevice="CO4-x34b-hot-something12-09a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/25" EndDevice="CO4-x34b-hot-something12-09a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/26" EndDevice="CO4-x34b-hot-something12-09b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/26" EndDevice="CO4-x34b-hot-something12-09b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/27" EndDevice="CO4-x34b-hot-something12-10a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/27" EndDevice="CO4-x34b-hot-something12-10a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/28" EndDevice="CO4-x34b-hot-something12-10b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/28" EndDevice="CO4-x34b-hot-something12-10b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/29" EndDevice="CO4-x34b-hot-something12-11a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/29" EndDevice="CO4-x34b-hot-something12-11a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/30" EndDevice="CO4-x34b-hot-something12-11b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/30" EndDevice="CO4-x34b-hot-something12-11b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/31" EndDevice="CO4-x34b-hot-something12-12a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/31" EndDevice="CO4-x34b-hot-something12-12a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/32" EndDevice="CO4-x34b-hot-something12-12b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/32" EndDevice="CO4-x34b-hot-something12-12b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/33" EndDevice="CO4-x34b-hot-something12-01a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/33" EndDevice="CO4-x34b-hot-something12-01a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/34" EndDevice="CO4-x34b-hot-something12-01b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/34" EndDevice="CO4-x34b-hot-something12-01b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/35" EndDevice="CO4-x34b-hot-something12-02a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/35" EndDevice="CO4-x34b-hot-something12-02a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/36" EndDevice="CO4-x34b-hot-something12-02b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/36" EndDevice="CO4-x34b-hot-something12-02b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/37" EndDevice="CO4-x34b-hot-something12-03a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/37" EndDevice="CO4-x34b-hot-something12-03a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/38" EndDevice="CO4-x34b-hot-something12-03b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/38" EndDevice="CO4-x34b-hot-something12-03b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/39" EndDevice="CO4-x34b-hot-something12-04a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/39" EndDevice="CO4-x34b-hot-something12-04a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/40" EndDevice="CO4-x34b-hot-something12-04b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/40" EndDevice="CO4-x34b-hot-something12-04b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/41" EndDevice="CO4-x34b-hot-something12-05a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/41" EndDevice="CO4-x34b-hot-something12-05a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/42" EndDevice="CO4-x34b-hot-something12-05b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/42" EndDevice="CO4-x34b-hot-something12-05b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/43" EndDevice="CO4-x34b-hot-something12-06a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/43" EndDevice="CO4-x34b-hot-something12-06a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/43" EndDevice="CO4-x34b-hot-something12-06b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/43" EndDevice="CO4-x34b-hot-something12-06b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/44" EndDevice="CO4-x34b-hot-something12-07a" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/44" EndDevice="CO4-x34b-hot-something12-07a" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="Ethernet1/45" EndDevice="CO4-x34b-hot-something12-07b" EndPort="Ethernet1/49" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="Ethernet1/46" EndDevice="CO4-x34b-hot-something12-07b" EndPort="Ethernet1/51" Bandwidth="10000" ConnectionType="L2Host" MediaType="10G Fiber" Optics="SFP-10G-SR"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="mgmt0" EndDevice="%L3AGG_MGMT_SW_A%" EndPort="%L3AGG_MGMT_SW_PORT_A%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="mgmt0" EndDevice="%L3AGG_MGMT_SW_B%" EndPort="%L3AGG_MGMT_SW_PORT_B%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="something-yyya" StartPort="mgmt0" EndDevice="%LB_MGMT_SW_A%" EndPort="%LB_MGMT_SW_PORT_A%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="something-yyyb" StartPort="mgmt0" EndDevice="%LB_MGMT_SW_B%" EndPort="%LB_MGMT_SW_PORT_B%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-01a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_A%" EndPort="%TOR_MGMT_SW_PORT_A%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-01b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_B%" EndPort="%TOR_MGMT_SW_PORT_B%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-02a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_C%" EndPort="%TOR_MGMT_SW_PORT_C%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-02b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_D%" EndPort="%TOR_MGMT_SW_PORT_D%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-03a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_E%" EndPort="%TOR_MGMT_SW_PORT_E%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-03b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_F%" EndPort="%TOR_MGMT_SW_PORT_F%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-04a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_G%" EndPort="%TOR_MGMT_SW_PORT_G%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-04b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_H%" EndPort="%TOR_MGMT_SW_PORT_H%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-05a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_I%" EndPort="%TOR_MGMT_SW_PORT_I%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-05b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_J%" EndPort="%TOR_MGMT_SW_PORT_J%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-06a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_K%" EndPort="%TOR_MGMT_SW_PORT_K%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-06b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_L%" EndPort="%TOR_MGMT_SW_PORT_L%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-07a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_M%" EndPort="%TOR_MGMT_SW_PORT_M%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-07b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_N%" EndPort="%TOR_MGMT_SW_PORT_N%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-08a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_O%" EndPort="%TOR_MGMT_SW_PORT_O%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-08b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_P%" EndPort="%TOR_MGMT_SW_PORT_P%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-09a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_Q%" EndPort="%TOR_MGMT_SW_PORT_Q%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-09b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_R%" EndPort="%TOR_MGMT_SW_PORT_R%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-10a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_S%" EndPort="%TOR_MGMT_SW_PORT_S%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-10b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_T%" EndPort="%TOR_MGMT_SW_PORT_T%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-11a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_U%" EndPort="%TOR_MGMT_SW_PORT_U%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-11b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_V%" EndPort="%TOR_MGMT_SW_PORT_V%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-12a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_W%" EndPort="%TOR_MGMT_SW_PORT_W%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-12b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_X%" EndPort="%TOR_MGMT_SW_PORT_X%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-01a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_Y%" EndPort="%TOR_MGMT_SW_PORT_Y%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-01b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_Z%" EndPort="%TOR_MGMT_SW_PORT_Z%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-02a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_AA%" EndPort="%TOR_MGMT_SW_PORT_AA%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-02b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_AB%" EndPort="%TOR_MGMT_SW_PORT_AB%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-03a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_AC%" EndPort="%TOR_MGMT_SW_PORT_AC%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-03b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_AD%" EndPort="%TOR_MGMT_SW_PORT_AD%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-04a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_AE%" EndPort="%TOR_MGMT_SW_PORT_AE%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-04b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_AF%" EndPort="%TOR_MGMT_SW_PORT_AF%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-05a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_AG%" EndPort="%TOR_MGMT_SW_PORT_AG%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-05b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_AH%" EndPort="%TOR_MGMT_SW_PORT_AH%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-06a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_AI%" EndPort="%TOR_MGMT_SW_PORT_AI%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-06b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_AJ%" EndPort="%TOR_MGMT_SW_PORT_AJ%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-07a" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_AK%" EndPort="%TOR_MGMT_SW_PORT_AK%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-07b" StartPort="mgmt0" EndDevice="%TOR_MGMT_SW_AL%" EndPort="%TOR_MGMT_SW_PORT_AL%" Bandwidth="1000" ConnectionType="MGMT" MediaType="Copper"/>
+    <DeviceInterfaceLink StartDevice="something-xxxa" StartPort="console" EndDevice="%L3_OOB_SW_A%" EndPort="%L3AGG_OOB_SW_PORT_A%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="something-xxxb" StartPort="console" EndDevice="%L3_OOB_SW_B%" EndPort="%L3AGG_OOB_SW_PORT_B%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="something-yyya" StartPort="console" EndDevice="%LB_OOB_SW_A%" EndPort="%LB_OOB_SW_PORT_A%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="something-yyyb" StartPort="console" EndDevice="%LB_OOB_SW_B%" EndPort="%LB_OOB_SW_PORT_B%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-01a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_A%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-01b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_B%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-02a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_C%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-02b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_D%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-03a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_E%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-03b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_F%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-04a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_G%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-04b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_H%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-05a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_I%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-05b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_J%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-06a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_K%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-06b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_L%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-07a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_M%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-07b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_N%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-08a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_O%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-08b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_P%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-09a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_Q%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-09b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_R%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-10a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_S%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-10b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_T%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-11a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_U%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-11b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_V%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-12a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_W%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34b-hot-something12-12b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_X%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-01a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_Y%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-01b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_Z%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-02a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_AA%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-02b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_AB%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-03a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_AC%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-03b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_AD%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-04a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_AE%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-04b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_AF%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-05a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_AG%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-05b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_AH%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-06a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_AI%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-06b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_AJ%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-07a" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_AK%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+    <DeviceInterfaceLink StartDevice="CO4-x34x-hot-something12-07b" StartPort="console" EndDevice="co4-oob-con-3" EndPort="%TOR_OOB_SW_PORT_AL%" Bandwidth="1000" ConnectionType="OOB" MediaType="Copper" location="IDF"/>
+  </Interfaces>
+</Deployment>
